@@ -1,224 +1,634 @@
 <template>
-  <div class="q-pa-md flex flex-center full-height">
+  <div
+    style="
+      width: 100%;
+      min-height: 100vh;
+      padding: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f5f5f5;
+    "
+  >
 
-    <div class="row full-width" style="max-width: 1400px;">
+    <div
+      style="
+        width: 100%;
+        max-width: 1400px;
+        display: grid;
+        grid-template-columns: 1.35fr repeat(4, 1fr);
+        grid-template-rows: repeat(3, 230px);
+        gap: 6px;
+      "
+    >
 
-      <div class="col-8">
+      <q-card class="info-card"
+        style="
+          grid-row: 1 / 4;
+          overflow: hidden;
+          position: relative;
+          width: 600px;
+        "
+      >
 
-        <q-card class="left-card">
+        <img
+          :src="image"
+          class="cover-image"
+          style="
+            width: 90%;
+            height: 85%;
+            object-fit: cover;
+            position: absolute;
+            top: 20px;
+            left: 5%;
+          "
+        />
 
-          <div class="row items-center q-pa-md">
+        <div
+          style="
+            position: absolute;
+            left: 45px;
+            top: 110px;
+            color: white;
+            font-size: 25px;
+            letter-spacing: 5px;
+            transform: rotate(-90deg);
+            transform-origin: left bottom;
+          "
+        >
+        </div>
 
-            <div class="logo q-mr-lg">
-              <div class="text-purple q-gutter-md" style="font-size: 2em">
-                <q-icon name="shopping_cart" color="red-5" size="40px" />
-              </div>
-            </div>
-
-            <div class="row items-center q-gutter-md">
-
-              <q-btn flat label="SERVICES" no-caps />
-              <q-btn flat label="OFFICES" no-caps />
-              <q-btn flat label="TEAM" no-caps />
-              <q-btn flat label="PHILOSOPHY" no-caps />
-              <q-btn flat label="SPACES" no-caps />
-
-            </div>
-
+        <div
+          style="
+            position: absolute;
+            left: 25px;
+            right: 25px;
+            bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 9px;
+          "
+        >
+          <div>
+            <small>Design by:</small>
+            <div>Creative Studio</div>
           </div>
 
+          <div>2023</div>
+        </div>
 
-          <div class="image-area">
-
-            <div class="circle"></div>
-
-            <q-img
-              :src="lawyer"
-              class="person-image"
-              fit="contain"
-              no-spinner
-            />
-
-          </div>
+      </q-card>
 
 
-          <div class="team">
+      <q-card class="info-card">
 
-            <div>OUR TEAM</div>
+        <div>
+          <h3>INDEX</h3>
+          <q-separator />
 
-            <q-separator class="title-line" />
+          <p>ABOUT THE STUDIO</p>
+          <q-separator />
+          <p>TEAM</p>
+          <q-separator />
+          <p>MISSION</p>
+          <q-separator />
+          <p>COLLECTION</p>
+        </div>
 
-            <div class="name">
-              Lorraine Wolf
-            </div>
+        <img :src="image"
+        class="cover-image"
+        style="
+        margin-top: 80px;
+        height: 60%;">
 
-            <div class="job">
-              Technology<br>
-              lawyer
-            </div>
+      </q-card>
 
-            <a href="#">
-              Explore
-            </a>
 
-          </div>
+      <q-card class="info-card">
 
-        </q-card>
+        <div>
+          <h3>ABOUT THE STUDIO</h3>
+          <p>
+            About our studio, creative vision
+            and approach to modern fashion.
+          </p>
 
+          <p>
+            We create unique visual experiences
+            through thoughtful design.
+          </p>
+        </div>
+
+        <div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <img :src="image"
+          class="cover-image"
+          style="
+          margin-top: 40px;
+          height: 60%;">
+        </div>
+
+
+      </q-card>
+
+
+      <q-card class="info-card">
+
+        <div>
+          <h3>ABOUT THE STUDIO</h3>
+          <p>
+            About our studio, creative vision
+            and approach to modern fashion.
+          </p>
+
+          <p>
+            We create unique visual experiences
+            through thoughtful design.
+          </p>
+
+          <p>
+            We create unique visual experiences
+            through thoughtful design.
+          </p>
+          <p>
+            We create unique visual experiences
+            through thoughtful design.
+          </p>
+        </div>
+
+        <div class="q-pa-md">
+        <div class="q-gutter-md column">
+
+        <q-img
+          :src="image"
+          class="cover-image"
+          style="width: 100%; height: 55px;"
+          fit="cover"
+        />
+
+        <q-img
+          :src="image"
+          class="cover-image"
+          style="width: 100%; height: 55px;"
+          fit="cover"
+        />
+
+        <q-img
+          :src="image"
+          class="cover-image"
+          style="width: 100%; height: 55px;"
+          fit="cover"
+        />
+
+         </div>
       </div>
 
+      </q-card>
 
-      <div class="col-4">
 
-        <q-card class="right-card">
+      <q-card class="info-card">
 
-          <q-btn
-            outline
-            color="white"
-            label="LOGIN"
-            no-caps
-            class="login-btn"
+        <div>
+          <h3>MISSION</h3>
+          <p>
+            About our studio, creative vision
+            and approach to modern fashion.
+          </p>
+
+          <p>
+            We create unique visual experiences
+            through thoughtful design.
+          </p>
+        </div>
+
+        <div>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <img :src="image"
+          class="cover-image"
+          style="
+          margin-top: 40px;
+          height: 60%;">
+        </div>
+
+
+      </q-card>
+
+
+      <q-card class="info-card"
+        style="
+          display: flex;
+          flex-direction: column;
+        "
+      >
+
+        <h3
+          style="
+            margin: 0 0 15px;
+            font-size: 14px;
+            font-weight: 500;
+          "
+        >
+          MODERN FASHION
+        </h3>
+
+        <q-img
+          :src="image"
+          class="cover-images"
+          style="
+            width: 70%;
+            height: 100px;
+          "
+          fit="cover"
+        />
+
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 15px;
+          "
+        >
+
+          <div style="width: 70%;">
+            <p
+              style="
+                margin: 0;
+                font-size: 5px;
+                line-height: 1.5;
+                color: #555;
+              "
+            >
+              About our studio, creative vision
+              and approach to modern fashion.
+            </p>
+          </div>
+
+          <div style="width: 30%;">
+            <p
+              style="
+                margin: 0;
+                font-size: 5px;
+                line-height: 1.5;
+                color: #555;
+              "
+            >
+              Through thoughtful design.
+            </p>
+          </div>
+
+        </div>
+
+      </q-card>
+
+      <q-card class="info-card"
+        style="
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+        "
+      >
+
+        <div>
+          <h3>MODERN FASHION SHOW</h3>
+
+          <p style=" width: 70%; font-size: 5px;">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui nam illum saepe ipsum asperiores. Pariatur accusamus eius sunt facere vitae modi minus iure a accusantium! Laborum iusto veniam odio quos?
+          </p>
+        </div>
+
+        <div style="width: 100%;">
+
+          <q-img
+            :src="image"
+            style="
+              width: 70%;
+              height: 70px;
+            "
+            fit="cover"
           />
 
-          <div class="content">
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 6px;
+              margin-top: 6px;
+              width: 100%;
+            "
+          >
 
-            <div class="title">
-              Your legal advisers
-              <br>
-              for the problems
-              <br>
-              of this century
-            </div>
+            <q-img
+              :src="image"
+              style="
+                width: 100%;
+                height: 80px;
+              "
+              fit="cover"
+            />
 
-            <div class="subtitle">
-              We offer solutions adapted to
-              <br>
-              today's needs
-            </div>
-
-            <q-btn
-              color="white"
-              text-color="primary"
-              label="VIEW MORE"
-              no-caps
-              class="view-btn"
+            <q-img
+              :src="image"
+              style="
+                width: 100%;
+                height: 80px;
+              "
+              fit="cover"
             />
 
           </div>
 
-        </q-card>
+        </div>
 
-      </div>
+      </q-card>
+
+      <q-card class="info-card">
+
+        <div>
+          <h3>NEW COLLECTION</h3>
+          <p>
+            About our studio, creative vision
+            and approach to modern fashion.
+          </p>
+
+          <p>
+            We create unique visual experiences
+            through thoughtful design.
+          </p>
+        </div>
+
+        <div>
+
+          <img :src="image"
+          class="cover-image"
+          style="
+          margin-top: 80px;
+          height: 60%;">
+        </div>
+
+
+      </q-card>
+
+
+      <q-card class="info-card">
+
+        <div>
+
+          <p
+          style="padding-top: 30px;">
+            New ideas, new styles and
+            contemporary fashion.
+          </p>
+
+          <img :src="image"
+          class="cover-image"
+          style="
+          margin-top: 70px;
+          height: 30%;">
+        </div>
+
+        <div>
+          <img :src="image"
+        class="cover-image"
+        style="
+        height: 45%;">
+
+        <p
+          style="padding-top: 30px;">
+            New ideas, new styles and
+            contemporary fashion.
+        </p>
+        </div>
+
+      </q-card>
+
+
+      <q-card class="info-card">
+
+        <div>
+
+          <h3>INTERIORS</h3>
+
+          <img :src="image"
+          class="cover-image"
+          style="
+          margin-top: 20px;
+          height: 60%;">
+
+          <p>
+            New ideas, new styles and
+            contemporary fashion.
+        </p>
+        </div>
+
+        <div>
+          <img :src="image"
+        class="cover-image"
+        style="
+        height: 45%;">
+
+        <p
+          style="padding-top: 30px;">
+            New ideas, new styles and
+            contemporary fashion.
+        </p>
+        </div>
+
+      </q-card>
+
+
+      <q-card class="info-card"
+        style="
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+        "
+      >
+
+        <div style="width: 100%; margin-top: 20px;" >
+
+          <q-img
+            :src="image"
+            style="
+              width: 48%;
+              height: 70px;
+            "
+            fit="cover"
+          />
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 6px;
+              margin-top: 6px;
+              width: 100%;
+            "
+          >
+
+            <q-img
+              :src="image"
+              style="
+                width: 100%;
+                height: 80px;
+              "
+              fit="cover"
+            />
+
+            <q-img
+              :src="image"
+              style="
+                width: 100%;
+                height: 80px;
+                margin-top: -50px;
+              "
+              fit="cover"
+            />
+
+          </div>
+
+        </div>
+
+      </q-card>
+
+
+      <q-card class="info-card">
+
+        <div>
+
+          <h3>BEST COLLECTION</h3>
+          <p
+          style="padding-top: 5px;">
+            New ideas, new styles and
+            contemporary fashion.
+          </p>
+
+          <img :src="image"
+          class="cover-image"
+          style="
+          margin-top: 10px;
+          height: 40%;">
+          <p
+          style="padding-top: 5px;">
+            New ideas, new styles and
+            contemporary fashion.
+          </p>
+        </div>
+
+        <div>
+
+        <p
+          style="padding-top: 60px;">
+            New ideas, new styles and
+            contemporary fashion.
+        </p>
+          <img :src="image"
+        class="cover-image"
+        style="
+        height: 45%;">
+        </div>
+
+      </q-card>
+
+
+      <q-card class="info-card"
+        style="
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+        "
+      >
+
+        <div>
+          <p style=" width: 70%; font-size: 5px;">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui nam illum saepe ipsum asperiores. Pariatur accusamus eius sunt facere vitae modi minus iure a accusantium! Laborum iusto veniam odio quos?
+          </p>
+        </div>
+
+        <div style="width: 100%; margin-top: 20px;" >
+
+          <q-img
+            :src="image"
+            style="
+              width: 48%;
+              height: 70px;
+            "
+            fit="cover"
+          />
+
+          <div
+            style="
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: 6px;
+              margin-top: 6px;
+              width: 100%;
+            "
+          >
+
+            <q-img
+              :src="image"
+              style="
+                width: 100%;
+                height: 80px;
+              "
+              fit="cover"
+            />
+
+            <q-img
+              :src="image"
+              style="
+                width: 100%;
+                height: 80px;
+                margin-top: -50px;
+              "
+              fit="cover"
+            />
+
+          </div>
+
+        </div>
+
+      </q-card>
 
     </div>
 
   </div>
 </template>
 
+<script setup> import image from 'src/assets/image.png' </script>
 
-<script setup>
-import { ref } from 'vue'
-import lawyer from 'src/assets/lawyer.png'
+<style scoped>
 
-const tab = ref('offices')
-</script>
+.info-card {
+  border-radius: 0;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 6px #ccc;
+}
 
+.info-card h3 {
+  margin: 0 0 7px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+}
 
-<style lang="sass" scoped>
+.info-card p {
+  margin: 5px 0;
+  font-size: 7px;
+  line-height: 1.5;
+  color: #555;
+}
 
-.left-card
-  height: 770px
-  position: relative
-
-.right-card
-  height: 770px
-  background: #ff6266
-  position: relative
-
-
-.image-area
-  position: absolute
-  top: 180px
-  left: 40%
-  width: 500px
-  height: 500px
-  display: flex
-  align-items: center
-  justify-content: center
-
-
-.circle
-  width: 320px
-  height: 320px
-  background: #ff6266
-  border-radius: 50%
-  position: absolute
-  z-index: 1
-
-
-.person-image
-  width: 500px
-  height: 500px
-  position: relative
-  z-index: 2
-  left: -120px
-  bottom: 20px
-
-
-.team
-  position: absolute
-  left: 40px
-  bottom: 60px
-
-
-.title-line
-  width: 105px
-  margin: 9px 0 20px
-  background: #333333
-
-
-.name
-  margin-top: 15px
-  color: grey
-
-
-.job
-  font-size: 20px
-  margin: 8px 0 15px
-
-
-.team a
-  color: #ff6266
-
-
-.login-btn
-  position: absolute
-  top: 30px
-  right: 30px
-  width: 105px
-  height: 40px
-  border-radius: 0 16px 0 16px
-
-
-.view-btn
-  width: 150px
-  height: 48px
-  border-radius: 0 22px 0 22px
-
-
-.content
-  position: absolute
-  top: 170px
-  left: 50px
-  color: white
-
-
-.title
-  font-size: 30px
-  font-weight: bold
-
-
-.subtitle
-  margin: 20px 0 35px
+.info-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 </style>
